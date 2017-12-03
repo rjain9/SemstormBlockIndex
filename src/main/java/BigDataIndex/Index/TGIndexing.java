@@ -57,8 +57,8 @@ public class TGIndexing {
 	 */
 	public static Text[] calculateMinMax(List<Text> columnValues){
 		Text[] minMax = new Text[2];
-		Text min = new Text("ZZZZZZZZZ");
-		Text max = new Text();
+		Text min = columnValues.get(0);
+		Text max = columnValues.get(0);
 		
 		for(Text value:columnValues){
 			if(value.compareTo(max)>0){
